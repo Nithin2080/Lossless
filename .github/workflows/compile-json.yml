@@ -1,6 +1,10 @@
 name: Compile Submissions
 
 on:
+  workflow_run:
+    workflows: ["Validate & Auto Merge"]
+    types:
+      - completed
   push:
     branches:
       - main
